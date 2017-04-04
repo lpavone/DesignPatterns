@@ -53,6 +53,15 @@ public class MultipleRemoteControlTest {
         multipleRemoteControl.setCommand(3, doorOpen, doorClose);
         multipleRemoteControl.setCommand(4, stereoOnWithCd, stereoOff);
 
+        /**
+         * Note: if ICommand interface had only a single method we could have used
+         * a lambda expression to simplify, like this:
+         *
+         * multipleRemoteControl.setCommand(0, livingRoomLight::on, livingRoomLight::off);
+         *
+         * and avoid creating multiple Command objects for every device.
+         */
+
         System.out.println(multipleRemoteControl);
 
         //now press on/off every slot
