@@ -5,38 +5,39 @@ package Command.impl;
  */
 public class CeilingFan extends Device{
 
-    private String speed;
+    private Speed speed;
 
     public CeilingFan(String location) {
         super(location);
+        speed = Speed.OFF;
     }
 
     void high(){
-        speed = "high";
+        speed = Speed.HIGH;
         getSpeed();
     }
 
     void medium(){
-        speed = "medium";
+        speed = Speed.MEDIUM;
         getSpeed();
     }
 
     void low(){
-        speed = "low";
+        speed = Speed.LOW;
         getSpeed();
     }
 
     void on(){
-        speed = "stopped";
+        speed = Speed.LOW;
         getSpeed();
     }
 
     void off(){
-        speed = "stopped";
+        speed = Speed.OFF;
         getSpeed();
     }
 
-    private void getSpeed() {
-        System.out.println(getLocation() + " is on " + speed + " speed");
+    Speed getSpeed() {
+        return speed;
     }
 }
