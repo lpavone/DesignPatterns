@@ -5,8 +5,12 @@ Design Principles
 * Separate what vary from what stays the same.
 * Program to interface, not an implementation.
 * Favor composition over inheritance.
-* Strive for loosely coupled designs between objects than interact (you know only what interface implements...).
-* Classes should be open for extension but closed for modification.
+* THE POWER OF LOOSE COUPLING: Strive for loosely coupled designs between objects than interact (you know only what
+interface implements...).
+* OPEN-CLOSED: Classes should be open for extension but closed for modification.
+* THE DEPENDENCY INVERSION: Depend upon abstractions. Do not depend upon concrete classes.
+* THE PRINCIPLE OF LEAST KNOWLEDGE: talk only to your immediate friends (or reduce interaction between objects to just
+a few close "friends").
 
 DECORATOR
 =========
@@ -16,10 +20,6 @@ functionality.
 FACTORY METHOD
 ==============
 Defines an interface for creating an object but let's subclasses decide which class to instantiate.
-
-DEPENDENCY INVERSION PRINCIPLE
-==============================
-Depend upon abstractions. Do not depend upon concrete classes.
 
 ABSTRACT FACTORY PATTERN
 ============================
@@ -67,9 +67,20 @@ Persistent state is the enemy of unit testing. One of the things that makes unit
 COMMAND PATTERN
 ===============
 Encapsulates a request as an object, thereby letting you parametrize other objects with different requests, queue or
-log requests, and support undoable operations.
+log requests, and support undoable operations (processing queues by mulitple threads, store requests to support 
+recovery after server crash events).
 
 NULL OBJECT
 ===========
 Useful when you don't have a meaningful object to return and yet you want to remove the responsibility for handling
 NULL from the client.
+
+ADAPTER PATTERN
+===============
+Converts the interface of a class into another interface the clients expect. Adapter lets classes work together that
+couldn't otherwise because of incompatible interfaces.
+
+FACADE PATTERN
+==============
+Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes
+the subsystem easier to use.
