@@ -1,6 +1,4 @@
-package Duck;
-
-import java.util.HashMap;
+package Strategy_Duck;
 
 /**
  * Created by leonardo on 07/02/17.

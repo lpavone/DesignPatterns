@@ -1,4 +1,4 @@
-package Duck;
+package Strategy_Duck;
 
 /**
  * Created by leonardo on 07/02/17.
@@ -6,6 +6,6 @@ package Duck;
 public class NormalQuack implements QuackBehaviour {
     @Override
     public void quack() {
-        System.out.println("Normal Duck.Quack!");
+        System.out.println("Normal Strategy_Duck.Quack!");
     }
 }
