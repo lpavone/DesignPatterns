@@ -16,6 +16,7 @@ a few close "friends"). This principle tell us we should only invoke methods tha
 - Any object the method creates or instantiates
 - Any components of the object
 * Hollywood principle: don't call us, we'll call you. High level components call low level components.
+* A class should have only one reason to change.
 
 STRATEGY
 ========
@@ -99,3 +100,13 @@ TEMPLATE METHOD
 ===============
 Define the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses
 redefine certain steps of an algorithm without changing the algorithm's structure.
+
+ITERATOR
+========
+Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+
+COMPOSITE
+=========
+Allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat
+individual objects and compositions of objects uniformly.
+
