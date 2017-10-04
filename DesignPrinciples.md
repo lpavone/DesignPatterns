@@ -1,6 +1,4 @@
-=================
-Design Principles
-=================
+# Design Principles
 
 * Separate what vary from what stays the same.
 * Program to interface, not an implementation.
@@ -18,27 +16,22 @@ a few close "friends"). This principle tell us we should only invoke methods tha
 * Hollywood principle: don't call us, we'll call you. High level components call low level components.
 * A class should have only one reason to change.
 
-STRATEGY
-========
+# STRATEGY
 Define a family of algorithms, encapsulates each one, and makes them interchangeable. Strategy lets the algorithm vary
 independently from clients that use it.
 
-DECORATOR
-=========
+# DECORATOR
 Attach additional responsabilities to an object dinamically. Provide a flexible alternative to subclassing for extending
 functionality.
 
-FACTORY METHOD
-==============
+# FACTORY METHOD
 Defines an interface for creating an object but let's subclasses decide which class to instantiate.
 
-ABSTRACT FACTORY PATTERN
-============================
+# ABSTRACT FACTORY PATTERN
 Provides an interface for creating families of related or dependent objects without specifying their concrete classes.
 
-SINGLETON
-=========
-Ensure a class has only an instance and provides a global point to access it. 
+# SINGLETON
+Ensure a class has only an instance and provides a global point to access it.
 But.... Why Singletons are evil? https://blogs.msdn.microsoft.com/scottdensmore/2004/05/25/why-singletons-are-evil/
 
 1)       Singletons frequently are used to provide a global access point for some service.
@@ -75,41 +68,36 @@ Persistent state is the enemy of unit testing. One of the things that makes unit
   is held in a static variable. This is an invitation for test-dependence. Avoid this by passing references to objects
   to your classes and methods.
 
-COMMAND PATTERN
-===============
+# COMMAND PATTERN
 Encapsulates a request as an object, thereby letting you parametrize other objects with different requests, queue or
 log requests, and support undoable operations (processing queues by mulitple threads, store requests to support 
 recovery after server crash events).
 
-NULL OBJECT
-===========
+# NULL OBJECT
 Useful when you don't have a meaningful object to return and yet you want to remove the responsibility for handling
 NULL from the client.
 
-ADAPTER PATTERN
-===============
+# ADAPTER PATTERN
 Converts the interface of a class into another interface the clients expect. Adapter lets classes work together that
 couldn't otherwise because of incompatible interfaces.
 
-FACADE PATTERN
-==============
+# FACADE PATTERN
 Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher level interface that makes
 the subsystem easier to use.
 
-TEMPLATE METHOD
-===============
+# TEMPLATE METHOD
 Define the skeleton of an algorithm in a method, deferring some steps to subclasses. Template Method lets subclasses
 redefine certain steps of an algorithm without changing the algorithm's structure.
 
-ITERATOR
-========
+# ITERATOR
 Provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
 
-COMPOSITE
-=========
+# COMPOSITE
 Allows you to compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat
 individual objects and compositions of objects uniformly.
 
-STATE
-=====
+# STATE
 Allows an object to alter its behaviour when its internal state changes. The object will appear to change its class.
+
+# PROXY
+Provide a surrogate or placeholder for another object to control access to it.
