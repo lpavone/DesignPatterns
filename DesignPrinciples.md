@@ -9,10 +9,10 @@ interface implements...).
 * THE DEPENDENCY INVERSION: Depend upon abstractions. Do not depend upon concrete classes.
 * THE PRINCIPLE OF LEAST KNOWLEDGE: talk only to your immediate friends (or reduce interaction between objects to just
 a few close "friends"). This principle tell us we should only invoke methods that belong to:
-- The object itself
-- Objects passed in as a parameter to the method
-- Any object the method creates or instantiates
-- Any components of the object
+<br>- The object itself
+<br>- Objects passed in as a parameter to the method
+<br>- Any object the method creates or instantiates
+<br>- Any components of the object
 * Hollywood principle: don't call us, we'll call you. High level components call low level components.
 * A class should have only one reason to change.
 
@@ -34,7 +34,7 @@ Provides an interface for creating families of related or dependent objects with
 Ensure a class has only an instance and provides a global point to access it.
 But.... Why Singletons are evil? https://blogs.msdn.microsoft.com/scottdensmore/2004/05/25/why-singletons-are-evil/
 
-1)       Singletons frequently are used to provide a global access point for some service.
+1) Singletons frequently are used to provide a global access point for some service.
 True, they do this, but at what cost? They provide a well-known point of access to some service in your application so
 that you don’t have to pass around a reference to that service. How is that different from a global variable? (remember,
 globals are bad, right???) What ends up happening is that the dependencies in your design are hidden inside the code,
@@ -44,14 +44,14 @@ global to avoid passing it around is a smell in your design; it is not a feature
 your design more closely, you can almost always come up with a design that it is better and does not have to pass around
  tramp data to every object and method.
 
-2)       Singletons allow you to limit creation of your objects.
+2) Singletons allow you to limit creation of your objects.
 This is true, but now you are mixing two different responsibilities into the same class, which is a violation of the
 Single Responsibility Principle. A class should not care whether or not it is a singleton. It should be concerned with
 its business responsibilities only. If you want to limit the ability to instantiate some class, create a factory or
 builder object that encapsulates creation, and in there, limit creation as you wish. Now the responsibilities of
 creation are partitioned away from the responsibilities of the business entity.
 
-3)       Singletons promote tight coupling between classes
+3) Singletons promote tight coupling between classes
 One of the underlying properties that makes code testable is that it is loosely coupled to its surroundings. This
 property allows you to substitute alternate implementations for collaborators during testing to achieve specific
 testing goals (think mock objects). Singletons tightly couple you to the exact type of the singleton object, removing
@@ -59,7 +59,7 @@ the opportunity to use polymorphism to substitute an alternative. A better alter
 above, is to alter your design to allow you to pass references to objects to your classes and methods, which will reduce
  the coupling issues described above.
 
-4)       Singletons carry state with them that last as long as the program lasts
+4) Singletons carry state with them that last as long as the program lasts
 Persistent state is the enemy of unit testing. One of the things that makes unit testing effective is that each test has
  to be independent of all the others. If this is not true, then the order in which the tests run affects the outcome of
  the tests. This can lead to cases where tests fail when they shouldn’t, and even worse, it can lead to tests that pass
@@ -101,3 +101,8 @@ Allows an object to alter its behaviour when its internal state changes. The obj
 
 # PROXY
 Provide a surrogate or placeholder for another object to control access to it.
+There are different variants of the Proxy Pattern:
+- Remote Proxy manages interaction between a client and remote object.
+- Virtual Proxy control access to an object that is expensive to instantiate.
+- Protection Proxy controls access of an object based on the caller.
+- Other variants: caching proxies, firewall proxy, synchronization proxy, etc.
