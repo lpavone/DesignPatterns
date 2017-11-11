@@ -106,3 +106,6 @@ There are different variants of the Proxy Pattern:
 - Virtual Proxy control access to an object that is expensive to instantiate.
 - Protection Proxy controls access of an object based on the caller.
 - Other variants: caching proxies, firewall proxy, synchronization proxy, etc.
+
+# BUILDER
+Used to encapsulate the construction of a product and allow it to be constructed in steps.
