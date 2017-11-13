@@ -108,4 +108,9 @@ There are different variants of the Proxy Pattern:
 - Other variants: caching proxies, firewall proxy, synchronization proxy, etc.
 
 # BUILDER
-Used to encapsulate the construction of a product and allow it to be constructed in steps.
+Use this pattern to encapsulate the construction of a product and allow it to be constructed in steps.
+
+# BRIDGE
+Use this pattern to decouple an abstraction from its implementation so that the two can vary independently.
+
+
