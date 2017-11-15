@@ -113,4 +113,9 @@ Use this pattern to encapsulate the construction of a product and allow it to be
 # BRIDGE
 Use this pattern to decouple an abstraction from its implementation so that the two can vary independently.
 
+# CHAIN OF RESPONSABILITY
+Use this pattern when you want to give more than one object a chance to handle a request.
+Chain the receiving objects and pass the request along the chain until an object handles it.
 
+#FLYWEIGHT
+Use this pattern when one instance of a class can bes used to provide many virtual instances.
