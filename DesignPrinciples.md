@@ -119,3 +119,14 @@ Chain the receiving objects and pass the request along the chain until an object
 
 #FLYWEIGHT
 Use this pattern when one instance of a class can bes used to provide many virtual instances.
+
+# MEDIATOR
+Use this pattern to centralize complex communications and control between objects.
+
+# MEMENTO
+Use the Memento pattern when you need to be able to return an object to one of its previous states;
+for instance, if your user request and "undo".
+
+# VISITOR
+Use this pattern when you want add capabilities to a composite of objects and encapsulation is not
+important.
